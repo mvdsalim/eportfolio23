@@ -1,0 +1,138 @@
+html {
+  box-sizing:border-box;
+}
+*, *::before, *::after {
+  box-sizing:inherit;
+}
+body {
+  font:normal 1.1em/1.2 'Raleway',sans-serif;
+  font-weight:300;
+  margin:0;
+  background-color:#fffbf1; /* off-white to warm the page */
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family:'Quicksand',sans-serif;
+  font-weight:500;
+}
+a {
+  color:grey;
+}
+/* -- 1a. General layout classes */
+.page-container {
+  max-width:1200px;
+  margin:0 auto;
+}
+.hidden {
+  position:absolute;
+  left:-10000px;
+  width:1px;
+  height:1px;
+}
+.flex-container {
+  display:flex;
+  flex-flow:row wrap;
+}
+.flex-container > * {
+  margin:0 1em 1em 0;
+}
+.flex-container > *:last-child {
+  margin:0;
+}
+button, a.button, .button {
+  background-color:red;
+  color:#fff !important; /* !important ensures this will always be enforced, but use sparingly */
+  text-transform:uppercase;
+  text-decoration:none !important;
+  padding:0.5em 0.8em;
+  border:none;
+  border-radius:20px;
+  font-size:0.8em;
+}
+button:hover, a.button:hover, .button:hover {
+  background-color:#c9283e;
+}
+/* 2. HEADER */
+#header {
+  background-color:grey;
+  margin-bottom:1em;
+}
+/* only set padding for the page-container that's a child
+   of #header */
+#header > .page-container {
+  padding:1em; /* I want the contents to have some padding but I want to make sure the main-menu background
+  color goes all the way across the page width */
+}
+#header a {
+  color:#fff;
+  text-decoration:none;
+}
+#header a:hover {
+  color:#260f25;
+}
+/* 3. MENU */
+#main-menu {
+  background-color:#c9283e;
+}
+#main-menu a {
+  font-size:1.15em;
+}
+#main-menu a:hover {
+  color:#ffe5a5;
+}
+
+.menu {
+  padding:0 1em;
+  font-family:'Quicksand',sans-serif;
+  font-weight:500;
+}
+.menu li {
+  display:inline-block;
+  list-style-type:none;
+  margin-right:1.7em;
+  vertical-align:top;
+  text-transform:uppercase;
+  padding:0.5em 0;
+}
+
+#main {
+  padding:1em; /* some space for the content */
+  flex:2 0 0;
+}
+#sidebar {
+  padding:1em; /* some space for the content */
+  flex:1 0 0;
+}
+#main, #sidebar {
+  margin-bottom:1em;
+}
+/* -- 4a. Featured section */
+#featured {
+  background-color:#260f25;
+  color:#fff;
+  padding:3em 1em; 
+}
+#featured a {
+  color:#f0433a;
+  text-decoration:none;
+}
+#featured a:hover {
+  text-decoration:underline;
+}
+.featured-article {
+  flex:1 0 0;
+}
+.section-title {
+  text-transform:uppercase;
+  font-size:1em;
+  margin-top:0;
+  border-bottom:1px solid #540032;
+  padding:0.2em 0;
+}
+/* 5. FOOTER */
+#footer {
+  clear:both;
+  background-color:grey;
+  color:#fff;
+  font-size:0.8em;
+  padding:1em 0;
+}
